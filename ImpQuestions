@@ -1,5 +1,6 @@
 1)immutable class
-There are many immutable classes like String, Boolean, Byte, Short, Integer, Long, Float, Double etc. In short, all the wrapper classes and String class is immutable. We can also create immutable class by creating final class that have final data members.
+There are many immutable classes like String, Boolean, Byte, Short, Integer, Long, Float, Double etc. In short, all the wrapper classes and String class is immutable.
+We can also create immutable class by creating final class that have final data members.
 
 2)Singleton class
 To create the singleton class, we need to have static member of class, private constructor and static factory method.
@@ -8,5 +9,7 @@ Private constructor: It will prevent to instantiate the Singleton class from out
 
 
 3)marker interface
-An interface that does not contain methods, fields, and constants is known as marker interface. In other words, an empty interface is known as marker interface or tag interface. It delivers the run-time type information about an object. It is the reason that the JVM and compiler have additional information about an object. The Serializable and Cloneable interfaces are the example of marker interface. In short, it indicates a signal or command to the JVM.
+An interface that does not contain methods, fields, and constants is known as marker interface. In other words, an empty interface is known as marker interface or tag interface.
+It delivers the run-time type information about an object. It is the reason that the JVM and compiler have additional information about an object. 
+The Serializable and Cloneable interfaces are the example of marker interface. In short, it indicates a signal or command to the JVM.
 
