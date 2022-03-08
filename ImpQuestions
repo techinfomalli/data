@@ -13,3 +13,30 @@ An interface that does not contain methods, fields, and constants is known as ma
 It delivers the run-time type information about an object. It is the reason that the JVM and compiler have additional information about an object. 
 The Serializable and Cloneable interfaces are the example of marker interface. In short, it indicates a signal or command to the JVM.
 
+4) spring boot fallback mechanism(circut breaker)
+https://www.tutorialspoint.com/spring_boot/spring_boot_hystrix.htm#:~:text=Hystrix%20is%20a%20library%20from,time%20to%20send%20the%20response.
+<dependency>
+   <groupId>org.springframework.cloud</groupId>
+   <artifactId>spring-cloud-starter-hystrix</artifactId>
+</dependency>
+
+
+@SpringBootApplication
+@EnableHystrix
+public class HystrixappApplication {
+   public static void main(String[] args) {
+      SpringApplication.run(HystrixappApplication.class, args);
+   }
+   
+   
+@RequestMapping(value = "/")
+@HystrixCommand(fallbackMethod = "fallback_hello", commandProperties = {
+   @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")
+})
+public String hello() throws InterruptedException {
+   Thread.sleep(3000);
+   return "Welcome Hystrix";
+}
+private String fallback_hello() {
+   return "Request fails. It takes long time to response";
+}
