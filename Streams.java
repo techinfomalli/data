@@ -34,7 +34,10 @@ Arrays.stream(new int[] {1,2,3,4,5,6,7,8,9,10}).map(x->x*x).min().ifPresent(Syst
 IntStream.range(1, 1000).forEach(System.out::print);
 //Arrays.stream(new int[] {1,2,3,4,5,6,7,8,9,10}).map(x->x*x).average().ifPresent(System.out::print);
 
-
+//7Http method
+https://doc.oroinc.com/api/create-update-related-resources/
+		
+		
 
 	}
 
