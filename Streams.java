@@ -37,7 +37,8 @@ IntStream.range(1, 1000).forEach(System.out::print);
 //7Http method
 https://doc.oroinc.com/api/create-update-related-resources/
 		
-		
+//8
+Actuator-->Monitoring
 
 	}
 
