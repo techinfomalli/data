@@ -1,0 +1,102 @@
+1) Rest Principles: https://www.javatpoint.com/what-is-rest
+
+2)
+@Repository
+public interface EmployeeRepository extends CrudRepository<Employee, Integer>  {
+   public List<Employee> findByName(String name);	
+   public List<Employee> findByAge(int age);
+   public Employee findByEmail(String email);
+   
+   @Query(value = "SELECT * FROM Employee ORDER BY name", nativeQuery = true)
+   public List<Employee> findAllSortedByNameUsingNative();
+   
+https://www.techferry.com/articles/spring-annotations.html   
+3) Spring anitations
+Annotation	Package Detail/Import statement
+@Service	import org.springframework.stereotype.Service;
+@Repository	import org.springframework.stereotype.Repository;
+@Component	import org.springframework.stereotype.Component;
+@Autowired	import org.springframework.beans.factory.annotation.Autowired;
+@Transactional	import org.springframework.transaction.annotation.Transactional;
+@Scope	import org.springframework.context.annotation.Scope;
+Spring MVC Annotations
+@Controller	import org.springframework.stereotype.Controller;
+@RequestMapping	import org.springframework.web.bind.annotation.RequestMapping;
+@PathVariable	import org.springframework.web.bind.annotation.PathVariable;
+@RequestParam	import org.springframework.web.bind.annotation.RequestParam;
+@ModelAttribute	import org.springframework.web.bind.annotation.ModelAttribute;
+@SessionAttributes	import org.springframework.web.bind.annotation.SessionAttributes;
+Spring Security Annotations
+@PreAuthorize	import org.springframework.security.access.prepost.PreAuthorize;
+
+
+	
+3)
+Spring Boot Annotations Everyone Should Know
+
+9. @SpringBootApplication
+10. @EnableAutoConfiguration
+11. @ComponetScan
+12. @Required
+13. @Qualifier
+14. @CookieValue
+15. @Lazy
+
+
+4)Java Design patterns
+https://www.javatpoint.com/design-patterns-in-java
+
+5)
+Design Patterns of Microservices
+https://www.edureka.co/blog/microservices-design-patterns
+Aggregator.
+API Gateway.
+Chained or Chain of Responsibility.
+Asynchronous Messaging.
+Database or Shared Data.
+Event Sourcing.
+Branch.
+Command Query Responsibility Segregator.
+
+6)Docker
+https://www.interviewbit.com/docker-interview-questions/
+
+7)Java 11 features:
+Java 10 was the last free Oracle JDK release that we could use commercially without a license. Starting with Java 11, there's no free long-term support (LTS) from Oracle.
+
+1)String::isBlank
+2)not(String:isBlank).
+3) var x
+4)
+Running Java Files
+A major change in this version is that we don't need to compile the Java source files with javac explicitly anymore:
+
+java HelloWorld.java
+Hello Java 11!
+8)jpa-composite-primary-keys
+https://www.baeldung.com/jpa-composite-primary-keys
+
+@Embeddable
+public class BookId implements Serializable {
+    private String title;
+    private String language;
+
+    // default constructor
+
+    public BookId(String title, String language) {
+        this.title = title;
+        this.language = language;
+    }
+
+    // getters, equals() and hashCode() methods
+}
+
+@Entity
+public class Book {
+    @EmbeddedId
+    private BookId bookId;
+
+    // constructors, other fields, getters and setters
+}
+
+https://spot.io/blog/amazon-ecs-vs-eks-container-orchestration-simplified/?utm_campaign=Ocean+search&utm_term=&utm_source=adwords&utm_medium=ppc&hsa_ver=3&hsa_kw=&hsa_cam=16712870764&hsa_tgt=aud-1547001082015:dsa-406018441888&hsa_acc=8916801654&hsa_mt=&hsa_net=adwords&hsa_ad=590255918546&hsa_src=g&hsa_grp=133419158565&gclid=CjwKCAjwsJ6TBhAIEiwAfl4TWMOy-mro-RGpN3Z7j8t6HSS5bW0COXX6jDckw7WcjsuqoYJIQab7QBoCCE8QAvD_BwE
